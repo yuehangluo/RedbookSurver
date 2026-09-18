@@ -1,0 +1,12 @@
+# WorkBuddy 内部数据（无需发布到站点）
+.workbuddy/
+.wbapp_*.genie
+
+# 临时导出 / 发货清单（兑换码在 js/codes.js 中，CSV 仅本地对账用）
+.tx_export_tmp_*
+*.csv
+
+# 系统 / IDE 垃圾
+System.Management*
+Thumbs.db
+.DS_Store

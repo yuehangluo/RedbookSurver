@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>知微心理 · 项目设计文档（小红书起号与「测评兑换码」变现方案）</title>
+<style>
+:root{
+  --bg:#0f1419; --bg-soft:#161c24; --bg-card:#1b222c; --bg-code:#131922;
+  --fg:#e6edf3; --fg-dim:#9aa7b4; --fg-faint:#6e7d8c;
+  --accent:#4fd1c5; --accent-2:#63b3ed; --warn:#f6ad55; --danger:#fc8181; --ok:#68d391;
+  --border:#2a3441; --border-soft:#222b36;
+  --mono:"JetBrains Mono","Cascadia Code",Consolas,"Courier New",monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  font-size:15px; line-height:1.75; -webkit-font-smoothing:antialiased;
+}
+.wrap{display:flex; max-width:1400px; margin:0 auto; gap:32px; padding:0 24px}
+aside{
+  position:sticky; top:0; align-self:flex-start;
+  width:260px; flex:0 0 260px; max-height:100vh; overflow-y:auto;
+  padding:32px 8px 48px 0; border-right:1px solid var(--border-soft);
+}
+aside .toc-title{
+  font-size:11px; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--fg-faint); font-weight:700; margin:0 0 12px 4px;
+}
+aside a{
+  display:block; padding:5px 10px; margin:1px 0; border-radius:6px;
+  color:var(--fg-dim); text-decoration:none; font-size:13px; line-height:1.5;
+  border-left:2px solid transparent; transition:all .15s;
+}
+aside a:hover{color:var(--fg); background:var(--bg-soft); border-left-color:var(--accent)}
+aside a.lv3{padding-left:24px; font-size:12.5px; color:var(--fg-faint)}
+aside a.lv4{padding-left:38px; font-size:12.5px; color:var(--fg-faint)}
+main{flex:1 1 auto; min-width:0; padding:32px 0 96px}
+header.doc{
+  padding:28px 32px; margin-bottom:32px; border-radius:12px;
+  background:linear-gradient(135deg,#1b2530 0%,#161c24 60%,#141a22 100%);
+  border:1px solid var(--border);
+}
+header.doc h1{margin:0 0 10px; font-size:28px; letter-spacing:-.01em; border:0; padding:0}
+header.doc .meta{color:var(--fg-faint); font-size:12.5px; font-family:var(--mono)}
+header.doc .meta b{color:var(--accent); font-weight:600}
+main h1{font-size:26px}
+main h2{
+  font-size:20px; margin:44px 0 16px; padding-bottom:10px;
+  border-bottom:1px solid var(--border); color:var(--accent);
+}
+main h3{font-size:16.5px; margin:32px 0 12px; color:var(--accent-2)}
+main h4{font-size:14.5px; margin:24px 0 10px; color:var(--fg)}
+h1,h2,h3,h4,h5{line-height:1.35; font-weight:650; scroll-margin-top:16px}
+p{margin:12px 0}
+a{color:var(--accent-2); text-decoration:none}
+a:hover{text-decoration:underline}
+strong{color:#fff; font-weight:650}
+hr{border:0; border-top:1px solid var(--border-soft); margin:32px 0}
+ul,ol{padding-left:24px; margin:12px 0}
+li{margin:5px 0}
+li>ul,li>ol{margin:4px 0}
+blockquote{
+  margin:16px 0; padding:10px 18px; border-left:3px solid var(--warn);
+  background:rgba(246,173,85,.07); color:#e2d5c3; border-radius:0 8px 8px 0;
+}
+blockquote p{margin:6px 0}
+code{
+  font-family:var(--mono); font-size:13px; padding:2px 6px; border-radius:4px;
+  background:var(--bg-code); color:#ffd8a8; border:1px solid var(--border-soft);
+}
+pre{
+  background:var(--bg-code); border:1px solid var(--border); border-radius:10px;
+  padding:16px 18px; overflow-x:auto; margin:16px 0; line-height:1.6;
+}
+pre code{background:none; border:0; padding:0; color:#c8d3de; font-size:12.5px}
+table{border-collapse:collapse; width:100%; margin:18px 0; font-size:13.5px; display:block; overflow-x:auto}
+th,td{border:1px solid var(--border); padding:9px 12px; text-align:left; vertical-align:top}
+th{background:var(--bg-card); color:var(--accent); font-weight:650; white-space:nowrap}
+tr:nth-child(even) td{background:rgba(255,255,255,.018)}
+td{color:var(--fg-dim)}
+td strong{color:var(--fg)}
+img{max-width:100%; border-radius:8px}
+footer.doc{
+  margin-top:56px; padding-top:20px; border-top:1px solid var(--border-soft);
+  color:var(--fg-faint); font-size:12px; font-family:var(--mono);
+  display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap;
+}
+.badge{
+  display:inline-block; padding:2px 9px; border-radius:999px; font-size:11.5px;
+  font-weight:650; letter-spacing:.03em; vertical-align:middle;
+}
+.badge.p0{background:rgba(252,129,129,.15); color:var(--danger); border:1px solid rgba(252,129,129,.35)}
+.badge.p1{background:rgba(246,173,85,.15); color:var(--warn); border:1px solid rgba(246,173,85,.35)}
+.badge.p2{background:rgba(99,179,237,.15); color:var(--accent-2); border:1px solid rgba(99,179,237,.35)}
+.badge.pd{background:rgba(104,211,145,.15); color:var(--ok); border:1px solid rgba(104,211,145,.35)}
+@media(max-width:1080px){
+  aside{display:none}
+  .wrap{padding:0 16px}
+  main{padding:20px 0 64px}
+  header.doc{padding:20px; border-radius:10px}
+}
+@media print{
+  body{background:#fff; color:#000}
+  aside{display:none}
+  main{padding:0}
+  header.doc{background:#f4f6f8; border-color:#ccc}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<aside><div class="toc-title">目录</div>
+<a class="lv2" href="#一项目定位">一、项目定位</a>
+<a class="lv2" href="#二产品架构">二、产品架构</a>
+<a class="lv2" href="#三测评体系设计">三、测评体系设计</a>
+<a class="lv2" href="#四兑换码变现模型">四、兑换码变现模型</a>
+<a class="lv3" href="#41-商品分层">4.1 商品分层</a>
+<a class="lv3" href="#42-自动发货">4.2 自动发货</a>
+<a class="lv3" href="#43-定价策略">4.3 定价策略</a>
+<a class="lv2" href="#五小红书起号与内容节奏">五、小红书起号与内容节奏</a>
+<a class="lv3" href="#51-账号定位">5.1 账号定位</a>
+<a class="lv3" href="#52-内容矩阵">5.2 内容矩阵</a>
+<a class="lv3" href="#53-起号节奏建议-4-周">5.3 起号节奏（建议 4 周）</a>
+<a class="lv2" href="#六合规红线">六、合规红线</a>
+<a class="lv2" href="#七技术部署">七、技术部署</a>
+<a class="lv2" href="#八里程碑">八、里程碑</a>
+</aside>
+<main>
+<header class="doc">
+  <h1>知微心理 · 项目设计文档（小红书起号与「测评兑换码」变现方案）</h1>
+  <div class="meta">源文件 <b>docs/小红书起号与测评兑换码变现方案.md</b>　·　生成于 <b>2026-09-18 01:10</b></div>
+</header>
+<h1>知微心理 · 项目设计文档（小红书起号与「测评兑换码」变现方案）</h1>
+<blockquote>
+<p>本文档是「知微心理」测评站点的项目设计总纲：定位、产品架构、测评体系、兑换码变现模型、小红书起号节奏、合规红线与里程碑。
+所有内容均围绕 <strong>心理测评虚拟商品</strong> 这一方向，不夹杂任何与心理测评无关的专业背景。</p>
+</blockquote>
+<hr />
+<h2 id="一项目定位">一、项目定位</h2>
+
+<p><strong>一句话</strong>：一个主打「专业感 + 自我探索」的轻量化心理测评平台，先以小红书为流量入口，用低价引流款攒权重，再用兑换码解锁的专业版测评做利润。</p>
+<p><strong>品牌</strong>：知微心理（Slogan：看见更真实的自己）。
+<strong>载体</strong>：纯前端静态站点（无后端、无数据库），作答在用户本地浏览器完成，零隐私上传风险——这本身就是合规与信任的核心卖点。
+<strong>核心人群</strong>：18–35 岁、对自我成长 / 关系 / 职业有困惑、愿意为「更懂自己」付费的内容消费用户。</p>
+<p><strong>为什么是心理测评，而不是泛娱乐测试</strong>：
+- 供给端：专业量表（依恋理论、大五人格 OCEAN）有认知壁垒，比「今天运势」更具复用性与可信度；
+- 需求端：小红书「自我探索 / 心理成长」内容长期高热，且用户对「专业感」的付费意愿更高；
+- 变现端：可自然延伸出「测评 + 解读报告」的虚拟商品，客单与复购都更优。</p>
+<hr />
+<h2 id="二产品架构">二、产品架构</h2>
+
+<p>站点分两层，由「测评兑换码」作为付费闸门：</p>
+<table>
+<thead>
+<tr>
+<th>层级</th>
+<th>内容</th>
+<th>获取方式</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>免费版</td>
+<td>人格原型、职业天赋、综合能量（各 30 题）</td>
+<td>直接作答</td>
+<td>引流、攒流量、建信任</td>
+</tr>
+<tr>
+<td>专业版</td>
+<td>亲密依恋风格、大五人格 OCEAN（各 32 / 30 题）</td>
+<td>输入兑换码解锁</td>
+<td>利润款、专业背书</td>
+</tr>
+</tbody>
+</table>
+<p><strong>兑换码机制</strong>（前端演示版）：
+- <code>tools/gen_codes.js</code> 生成一批码，写入 <code>js/codes.js</code>（演示用，校验在前端）；
+- 用户输入码 → <code>js/redeem.js</code> 在 <code>localStorage</code> 解锁专业版；
+- 演示阶段为前端校验，<strong>规模化时必须改为服务端核销</strong>（防批量盗刷、可统计销量）。</p>
+<p><strong>结果页交付物</strong>：每套测评输出「类型结论 + 维度画像条 + 特质标签 + 行动建议」四件套，可直接截图分享，天然适合小红书传播。</p>
+<hr />
+<h2 id="三测评体系设计">三、测评体系设计</h2>
+
+<p>五套测评，均基于李克特 5 点量表（非常不符合 → 非常符合，0–4 分），引擎自动累加并归一化为 0–100% 维度条。</p>
+<table>
+<thead>
+<tr>
+<th>编号</th>
+<th>测评</th>
+<th>题量</th>
+<th>维度</th>
+<th>是否付费</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>人格原型测评</td>
+<td>30</td>
+<td>探索者 / 战略家 / 疗愈者 / 创造者 / 执行者 / 联结者</td>
+<td>免费</td>
+</tr>
+<tr>
+<td>2</td>
+<td>职业天赋测评</td>
+<td>30</td>
+<td>创造 / 研究 / 社交 / 实操 / 经营 / 艺术</td>
+<td>免费</td>
+</tr>
+<tr>
+<td>3</td>
+<td>综合能量测评</td>
+<td>30</td>
+<td>财富 / 情感 / 事业 / 身心 / 心智</td>
+<td>免费</td>
+</tr>
+<tr>
+<td>4</td>
+<td>亲密依恋风格测评</td>
+<td>32</td>
+<td>安全 / 焦虑 / 疏离 / 恐惧</td>
+<td>专业版</td>
+</tr>
+<tr>
+<td>5</td>
+<td>大五人格 OCEAN</td>
+<td>30</td>
+<td>开放性 / 尽责性 / 外向性 / 宜人性 / 神经质</td>
+<td>专业版</td>
+</tr>
+</tbody>
+</table>
+<p><strong>方法论亮点</strong>（用于内容背书）：
+- 专业版引用成熟心理学框架（依恋理论、大五人格），比娱乐测试更有「科学感」；
+- 维度条可视化，让用户「看见」自己的结构，分享欲强；
+- 每套测评均含 1–2 道反向计分题，降低盲目认同偏差，提升专业可信度。</p>
+<p>详细题面、计分答案与结果解读见同目录《测评题库与答案解析》。</p>
+<hr />
+<h2 id="四兑换码变现模型">四、兑换码变现模型</h2>
+
+<h3 id="41-商品分层">4.1 商品分层</h3>
+
+<ul>
+<li><strong>引流款（约 80%）</strong>：单价 0.9 ~ 1.99 元，如「人格原型测评兑换码」。目标不是赚钱，是攒销量、攒店铺权重、攒自然流量。</li>
+<li><strong>专业款（约 15%）</strong>：单价 6.9 ~ 9.9 元，如「大五人格 + 依恋风格双测评包」。利润主力。</li>
+<li><strong>组合 / 高阶款（约 5%，谨慎）</strong>：「测评 + 解读报告模板」「自我探索周计划」，注意平台对高价虚拟商品的审核尺度。</li>
+</ul>
+<h3 id="42-自动发货">4.2 自动发货</h3>
+
+<p>小红书店铺支持虚拟商品自动发货：用户下单 → 系统推送兑换码 → 用户到站点输入即解锁。无需人工值守。</p>
+<h3 id="43-定价策略">4.3 定价策略</h3>
+
+<ul>
+<li>引流款宁可低（0.9~1.99）换量，靠专业款做利润；</li>
+<li>专业款给出「单买 vs 双测评包」对比，引导客单提升；</li>
+<li>不刻意做低价内卷，靠「专业感 + 结果可分享」建立差异化。</li>
+</ul>
+<hr />
+<h2 id="五小红书起号与内容节奏">五、小红书起号与内容节奏</h2>
+
+<h3 id="51-账号定位">5.1 账号定位</h3>
+
+<ul>
+<li>昵称 / 简介直接关联「心理测评 / 自我探索 / 人格」，例如「知微心理 · 懂一点自己」；</li>
+<li>简介钩子：「5 套专业测评，测完你会更懂自己」；</li>
+<li>视觉统一：深靛蓝 + 金的主色调，与站点一致，强化品牌识别。</li>
+</ul>
+<h3 id="52-内容矩阵">5.2 内容矩阵</h3>
+
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>比例</th>
+<th>示例</th>
+<th>目的</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>测评安利</td>
+<td>40%</td>
+<td>「测完破防了，我是恐惧型依恋」</td>
+<td>引流到站点</td>
+</tr>
+<tr>
+<td>结果解读</td>
+<td>30%</td>
+<td>「大五人格里神经质高的人，其实很有天赋」</td>
+<td>建立专业背书</td>
+</tr>
+<tr>
+<td>自我成长</td>
+<td>20%</td>
+<td>「用能量测评找回生活的重心」</td>
+<td>沉淀人设</td>
+</tr>
+<tr>
+<td>店铺活动</td>
+<td>10%</td>
+<td>「新上专业版兑换码，前 50 名半价」</td>
+<td>转化</td>
+</tr>
+</tbody>
+</table>
+<h3 id="53-起号节奏建议-4-周">5.3 起号节奏（建议 4 周）</h3>
+
+<ul>
+<li><strong>第 1 周</strong>：铺 5–8 篇测评安利笔记，统一挂站点链接 / 店铺；</li>
+<li><strong>第 2 周</strong>：上架 1 个引流款（1.99 元人格原型码）+ 1 个专业款（9.9 元大五人格码），接自动发货；</li>
+<li><strong>第 3 周</strong>：出 2–3 篇「结果解读」干货，强化专业感，引导店铺转化；</li>
+<li><strong>第 4 周</strong>：复盘数据，保留高互动选题，汰换低效内容，准备第二轮商品。</li>
+</ul>
+<hr />
+<h2 id="六合规红线">六、合规红线</h2>
+
+<ol>
+<li><strong>不碰医学 / 诊断结论</strong>：所有测评均标注「自我探索与成长用途，非专业心理 / 医学诊断，不能替代专业评估」。</li>
+<li><strong>数据最小化</strong>：作答仅在本地浏览器计算，不上传任何数据；这是信任卖点，也是合规底线。</li>
+<li><strong>不夸大、不制造焦虑</strong>：避免「你的依恋有问题」「必须修复」等表述，改用「看见模式、理解自己」的成长语境。</li>
+<li><strong>不违规导流私域</strong>：遵守平台规则，不引导加微信 / 外部联系方式完成交易。</li>
+<li><strong>类目红线</strong>：避开「教育培训」定向邀约类目，走「电子资源 / 趣味测试 / 虚拟资料」；电子资源多为「邀约 + 自荐提报」，提前准备原创 / 授权声明。</li>
+<li><strong>主体合规</strong>：以「个体户营业执照」开店，虚拟商品资质与税务按平台要求办理。</li>
+</ol>
+<hr />
+<h2 id="七技术部署">七、技术部署</h2>
+
+<ul>
+<li><strong>形态</strong>：纯静态站点（HTML + CSS + 原生 JS），可托管于任意静态空间。</li>
+<li><strong>当前部署</strong>：通过 WorkBuddy「发布为应用」上线，域名形如 <code>*.app-tencent.workbuddy.host</code>（演示 / 内测用）。</li>
+<li><strong>去 workbuddy 域名（正式品牌化）三选一</strong>：
+  1. <strong>自定义域名绑定</strong>：购买 <code>zhinwei.xin</code> 之类短域名，在托管平台做 CNAME 绑定，最省心；
+  2. <strong>Netlify / Vercel</strong>：导入仓库即部署，免费 HTTPS，支持自定义域名；
+  3. <strong>GitHub Pages + CNAME</strong>：免费静态托管，绑定自有域名。
+  （具体步骤见《部署与域名方案》沟通记录；上线前需你确认。）</li>
+</ul>
+<hr />
+<h2 id="八里程碑">八、里程碑</h2>
+
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>目标</th>
+<th>交付</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M1 内容</td>
+<td>5 套测评 ≥30 题、界面专业化</td>
+<td>本站 + 《测评题库与答案解析》</td>
+</tr>
+<tr>
+<td>M2 起号</td>
+<td>账号定位、首批笔记、上架 2 款商品</td>
+<td>店铺 + 自动发货</td>
+</tr>
+<tr>
+<td>M3 变现</td>
+<td>引流款跑出权重、专业款稳定出单</td>
+<td>销售数据复盘</td>
+</tr>
+<tr>
+<td>M4 升级</td>
+<td>服务端核销兑换码、自定义域名品牌化</td>
+<td>去 workbuddy 独立站点</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>下一步建议：先确认 M1 本站内容无误 → 我协助走一遍部署 / 域名方案，再启动 M2 起号。</p>
+</blockquote>
+<footer class="doc">
+  <span>知微心理 · 知微心理 · 项目设计文档（小红书起号与「测评兑换码」变现方案）</span>
+  <span>由 md2html.py 从 Markdown 自动生成，请勿直接编辑 HTML</span>
+</footer>
+</main>
+</div>
+
+<script>
+(function(){
+  var links=[].slice.call(document.querySelectorAll('aside a[href^="#"]'));
+  if(!links.length) return;
+  var map={};
+  links.forEach(function(a){ map[decodeURIComponent(a.getAttribute('href').slice(1))]=a; });
+  var heads=[].slice.call(document.querySelectorAll('main h2[id],main h3[id]'));
+  function onScroll(){
+    var top=document.documentElement.scrollTop+90, cur=null;
+    heads.forEach(function(h){ if(h.offsetTop<=top) cur=h; });
+    links.forEach(function(a){ a.style.color=''; a.style.borderLeftColor=''; });
+    if(cur && map[cur.id]){
+      map[cur.id].style.color='var(--accent)';
+      map[cur.id].style.borderLeftColor='var(--accent)';
+    }
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+})();
+</script>
+
+</body>
+</html>

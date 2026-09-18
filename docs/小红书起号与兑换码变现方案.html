@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>小红书起号与「测评兑换码」变现方案</title>
+<style>
+:root{
+  --bg:#0f1419; --bg-soft:#161c24; --bg-card:#1b222c; --bg-code:#131922;
+  --fg:#e6edf3; --fg-dim:#9aa7b4; --fg-faint:#6e7d8c;
+  --accent:#4fd1c5; --accent-2:#63b3ed; --warn:#f6ad55; --danger:#fc8181; --ok:#68d391;
+  --border:#2a3441; --border-soft:#222b36;
+  --mono:"JetBrains Mono","Cascadia Code",Consolas,"Courier New",monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--bg); color:var(--fg);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  font-size:15px; line-height:1.75; -webkit-font-smoothing:antialiased;
+}
+.wrap{display:flex; max-width:1400px; margin:0 auto; gap:32px; padding:0 24px}
+aside{
+  position:sticky; top:0; align-self:flex-start;
+  width:260px; flex:0 0 260px; max-height:100vh; overflow-y:auto;
+  padding:32px 8px 48px 0; border-right:1px solid var(--border-soft);
+}
+aside .toc-title{
+  font-size:11px; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--fg-faint); font-weight:700; margin:0 0 12px 4px;
+}
+aside a{
+  display:block; padding:5px 10px; margin:1px 0; border-radius:6px;
+  color:var(--fg-dim); text-decoration:none; font-size:13px; line-height:1.5;
+  border-left:2px solid transparent; transition:all .15s;
+}
+aside a:hover{color:var(--fg); background:var(--bg-soft); border-left-color:var(--accent)}
+aside a.lv3{padding-left:24px; font-size:12.5px; color:var(--fg-faint)}
+aside a.lv4{padding-left:38px; font-size:12.5px; color:var(--fg-faint)}
+main{flex:1 1 auto; min-width:0; padding:32px 0 96px}
+header.doc{
+  padding:28px 32px; margin-bottom:32px; border-radius:12px;
+  background:linear-gradient(135deg,#1b2530 0%,#161c24 60%,#141a22 100%);
+  border:1px solid var(--border);
+}
+header.doc h1{margin:0 0 10px; font-size:28px; letter-spacing:-.01em; border:0; padding:0}
+header.doc .meta{color:var(--fg-faint); font-size:12.5px; font-family:var(--mono)}
+header.doc .meta b{color:var(--accent); font-weight:600}
+main h1{font-size:26px}
+main h2{
+  font-size:20px; margin:44px 0 16px; padding-bottom:10px;
+  border-bottom:1px solid var(--border); color:var(--accent);
+}
+main h3{font-size:16.5px; margin:32px 0 12px; color:var(--accent-2)}
+main h4{font-size:14.5px; margin:24px 0 10px; color:var(--fg)}
+h1,h2,h3,h4,h5{line-height:1.35; font-weight:650; scroll-margin-top:16px}
+p{margin:12px 0}
+a{color:var(--accent-2); text-decoration:none}
+a:hover{text-decoration:underline}
+strong{color:#fff; font-weight:650}
+hr{border:0; border-top:1px solid var(--border-soft); margin:32px 0}
+ul,ol{padding-left:24px; margin:12px 0}
+li{margin:5px 0}
+li>ul,li>ol{margin:4px 0}
+blockquote{
+  margin:16px 0; padding:10px 18px; border-left:3px solid var(--warn);
+  background:rgba(246,173,85,.07); color:#e2d5c3; border-radius:0 8px 8px 0;
+}
+blockquote p{margin:6px 0}
+code{
+  font-family:var(--mono); font-size:13px; padding:2px 6px; border-radius:4px;
+  background:var(--bg-code); color:#ffd8a8; border:1px solid var(--border-soft);
+}
+pre{
+  background:var(--bg-code); border:1px solid var(--border); border-radius:10px;
+  padding:16px 18px; overflow-x:auto; margin:16px 0; line-height:1.6;
+}
+pre code{background:none; border:0; padding:0; color:#c8d3de; font-size:12.5px}
+table{border-collapse:collapse; width:100%; margin:18px 0; font-size:13.5px; display:block; overflow-x:auto}
+th,td{border:1px solid var(--border); padding:9px 12px; text-align:left; vertical-align:top}
+th{background:var(--bg-card); color:var(--accent); font-weight:650; white-space:nowrap}
+tr:nth-child(even) td{background:rgba(255,255,255,.018)}
+td{color:var(--fg-dim)}
+td strong{color:var(--fg)}
+img{max-width:100%; border-radius:8px}
+footer.doc{
+  margin-top:56px; padding-top:20px; border-top:1px solid var(--border-soft);
+  color:var(--fg-faint); font-size:12px; font-family:var(--mono);
+  display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap;
+}
+.badge{
+  display:inline-block; padding:2px 9px; border-radius:999px; font-size:11.5px;
+  font-weight:650; letter-spacing:.03em; vertical-align:middle;
+}
+.badge.p0{background:rgba(252,129,129,.15); color:var(--danger); border:1px solid rgba(252,129,129,.35)}
+.badge.p1{background:rgba(246,173,85,.15); color:var(--warn); border:1px solid rgba(246,173,85,.35)}
+.badge.p2{background:rgba(99,179,237,.15); color:var(--accent-2); border:1px solid rgba(99,179,237,.35)}
+.badge.pd{background:rgba(104,211,145,.15); color:var(--ok); border:1px solid rgba(104,211,145,.35)}
+@media(max-width:1080px){
+  aside{display:none}
+  .wrap{padding:0 16px}
+  main{padding:20px 0 64px}
+  header.doc{padding:20px; border-radius:10px}
+}
+@media print{
+  body{background:#fff; color:#000}
+  aside{display:none}
+  main{padding:0}
+  header.doc{background:#f4f6f8; border-color:#ccc}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<aside><div class="toc-title">目录</div>
+<a class="lv2" href="#一执行摘要">一、执行摘要</a>
+<a class="lv2" href="#二开店主体与资质">二、开店主体与资质</a>
+<a class="lv2" href="#三选品与定价模型">三、选品与定价模型</a>
+<a class="lv3" href="#31-商品结构漏斗模型">3.1 商品结构（漏斗模型）</a>
+<a class="lv3" href="#32-定价心理">3.2 定价心理</a>
+<a class="lv2" href="#四内容引流打法">四、内容引流打法</a>
+<a class="lv3" href="#41-账号定位">4.1 账号定位</a>
+<a class="lv3" href="#42-笔记选题公式">4.2 笔记选题公式</a>
+<a class="lv3" href="#43-封面与标题">4.3 封面与标题</a>
+<a class="lv3" href="#44-更新节奏与互动">4.4 更新节奏与互动</a>
+<a class="lv2" href="#五测评兑换码变现链路本项目已落地">五、「测评兑换码」变现链路（本项目已落地）</a>
+<a class="lv3" href="#51-生成兑换码工具端">5.1 生成兑换码（工具端）</a>
+<a class="lv3" href="#52-小红书上架-自动发货">5.2 小红书上架 + 自动发货</a>
+<a class="lv3" href="#53-用户解锁站点端">5.3 用户解锁（站点端）</a>
+<a class="lv2" href="#六合规清单必须守住">六、合规清单（必须守住）</a>
+<a class="lv2" href="#七从演示版到生产级进阶">七、从演示版到生产级（进阶）</a>
+<a class="lv2" href="#八本周可执行行动清单">八、本周可执行行动清单</a>
+</aside>
+<main>
+<header class="doc">
+  <h1>小红书起号与「测评兑换码」变现方案</h1>
+  <div class="meta">源文件 <b>docs/小红书起号与兑换码变现方案.md</b>　·　生成于 <b>2026-09-18 00:35</b></div>
+</header>
+<h1>小红书起号与「测评兑换码」变现方案</h1>
+<blockquote>
+<p>配套工具：本仓库 <code>psyche-survey/</code> 已是可运行的移动端测评站（5 套测评 + 兑换码解锁系统）。
+本文档讲清楚：怎么开店、怎么引流、怎么把测评变成可售卖的「兑换码」、以及必须守住的合规红线。</p>
+</blockquote>
+<hr />
+<h2 id="一执行摘要">一、执行摘要</h2>
+
+<ul>
+<li><strong>能卖，且你最有优势的方向是「自建测评站 + 小红书兑换码变现」</strong>。案例层面，心理/性格类测试在小红书是跑通赛道：有 1.99 元/份、102 天卖 2.4 万份的账号，也有 0.9 元单品卖 10 万+ 份的低粉高变现案例。</li>
+<li><strong>你的非对称优势是游戏音频专业</strong>。音频素材/模板比泛心理测评竞争小、客单可更高、还有真实背书——建议做「心理测评引流 + 音频 niche 承接」的组合拳。</li>
+<li><strong>2026 规则已收紧</strong>：小红书教育类目（成人/儿童教育）改为「定向邀约准入」，个人店禁卖课。我们的测评走「电子资源 / 娱乐测试」路线，避开教育类目，定位娱乐与自我探索，合规空间更大。</li>
+<li><strong>变现闭环</strong>：测评站托管到外网 → 小红书店内上架「测评兑换码」虚拟商品（1.99~9.9 元引流款）→ 用户下单后自动收到兑换码 → 打开站点输入码解锁专业版测评 → 截图分享带来新流量。</li>
+<li><strong>三条红线</strong>（详见第六节）：不碰医学/诊断结论、心理数据最小化、不夸大宣传、不违规导流私域。</li>
+</ul>
+<hr />
+<h2 id="二开店主体与资质">二、开店主体与资质</h2>
+
+<table>
+<thead>
+<tr>
+<th>主体类型</th>
+<th>适合度</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>个人店</td>
+<td>⚠️ 受限</td>
+<td>不能卖课、部分类目受限；适合先跑通「电子资源/测试」轻模式</td>
+</tr>
+<tr>
+<td>个体工商户</td>
+<td>✅ 推荐</td>
+<td>门槛低、可开电子资源/虚拟资料类目，税务简单，副业首选</td>
+</tr>
+<tr>
+<td>企业店</td>
+<td>✅ 可选</td>
+<td>若后续做品牌/团队化再升级</td>
+</tr>
+</tbody>
+</table>
+<p><strong>建议路径</strong>：先用「个体户营业执照」开店，类目选 <strong>「虚拟资料 / 电子资源」</strong> 或平台当前的 <strong>「趣味测试 / 电子文档」</strong> 类目（避开「教育培训」定向邀约类目）。电子资源类目多为「邀约 + 自荐提报」机制，准备好原创/授权声明再提报。</p>
+<blockquote>
+<p>⚠️ 腾讯员工提醒：正式铺开前，请先确认公司是否有 <strong>利益冲突 / 经商报备</strong> 要求。</p>
+</blockquote>
+<hr />
+<h2 id="三选品与定价模型">三、选品与定价模型</h2>
+
+<h3 id="31-商品结构漏斗模型">3.1 商品结构（漏斗模型）</h3>
+<ul>
+<li><strong>引流款（占 80%）</strong>：单价 0.9 ~ 9.9 元，例如「趣味性格测评兑换码」「今日运气签兑换码」。目标不是赚钱，是攒销量、攒权重、攒自然流量。</li>
+<li><strong>专业款（占 15%）</strong>：9.9 ~ 29.9 元，例如「大五人格科学画像兑换码」「恋爱依恋类型解读兑换码」。客单稍高、内容更厚。</li>
+<li><strong>组合/高阶款（占 5%，谨慎）</strong>：可做成「测评 + 解读报告模板」「音频人专属测评包」，但注意平台对高价虚拟商品的审核。</li>
+</ul>
+<h3 id="32-定价心理">3.2 定价心理</h3>
+<ul>
+<li>9.9 元是小红书虚拟商品「决策门槛最低」的价格带，优先用。</li>
+<li>引流款宁可低（0.9~1.99）换量，靠专业款和后续的音频 niche 内容做利润。</li>
+</ul>
+<hr />
+<h2 id="四内容引流打法">四、内容引流打法</h2>
+
+<h3 id="41-账号定位">4.1 账号定位</h3>
+<ul>
+<li>昵称/简介直接关联「心理测评 / 自我探索 / 趣味测试」，例如「心测小站 · 每天一个灵魂小测试」。</li>
+<li>简介放一句话钩子：「测过都说准的 5 个趣味测评，点我主页看结果」。</li>
+</ul>
+<h3 id="42-笔记选题公式">4.2 笔记选题公式</h3>
+<p><code>【情绪价值】+【身份标签】+【低门槛动作】</code>
+- 「社恐还是社牛？4 道题测出你内心的动物」
+- 「谈恋爱总没安全感？先看看你是哪种依恋类型」
+- 「打工人周一能量签：今天适合搞钱还是躺平？」
+- 「大五人格 10 题速测，你到底是卷王还是佛系」</p>
+<h3 id="43-封面与标题">4.3 封面与标题</h3>
+<ul>
+<li>封面：大字标题 + 一个 emoji 结果图（直接复用测评结果卡截图）。</li>
+<li>标题带「测」「你是」「几分钟」等词，制造参与感。</li>
+</ul>
+<h3 id="44-更新节奏与互动">4.4 更新节奏与互动</h3>
+<ul>
+<li>一天 1~3 篇，前期保量；爆款后稳定日更。</li>
+<li>评论区主动截流：有人问「准不准」，回复「主页第一个测试，自己测完更准～」。</li>
+<li>结果卡片天然可截图分享，鼓励用户「晒结果」，形成二次传播。</li>
+</ul>
+<hr />
+<h2 id="五测评兑换码变现链路本项目已落地">五、「测评兑换码」变现链路（本项目已落地）</h2>
+
+<p>整条链路已经在 <code>psyche-survey/</code> 里跑通，分三步：</p>
+<h3 id="51-生成兑换码工具端">5.1 生成兑换码（工具端）</h3>
+<ul>
+<li>运行 <code>tools/gen_codes.js</code>：
+  <code>node tools/gen_codes.js --count 50 --tier pro --prefix XHX</code></li>
+<li>产出两份文件：</li>
+<li><code>js/codes.js</code>：前端校验用的码表（<code>window.CODES = [...]</code>），站点凭它判断码是否有效。</li>
+<li><code>codes_export.csv</code>：给卖家的发货清单（code, tier, note, generatedAt），用来对账、防漏发。</li>
+<li>码格式示例：<code>XHX-R3YW-CFZE</code>（前缀-4位-4位，已规避 0/O、1/I 混淆）。</li>
+</ul>
+<h3 id="52-小红书上架-自动发货">5.2 小红书上架 + 自动发货</h3>
+<ul>
+<li>店内上架商品「专业版测评兑换码（大五人格 / 恋爱依恋）」，价格 9.9 元。</li>
+<li>发货方式二选一：</li>
+<li><strong>方式 A（推荐，零成本）</strong>：商品详情写「下单后自动发货，凭短信/站内信里的兑换码打开站点解锁」。用小红书自带虚拟发货或第三方自动发货工具（如阿索奇）把 <code>codes_export.csv</code> 导入，买家付款后自动派码。</li>
+<li><strong>方式 B</strong>：手动复制码发给买家（仅适合冷启动验证）。</li>
+</ul>
+<h3 id="53-用户解锁站点端">5.3 用户解锁（站点端）</h3>
+<ul>
+<li>用户打开站点 → 首页点「输入兑换码」→ 输入 <code>XHX-XXXX-XXXX</code> → 前端比对 <code>window.CODES</code> → 校验通过则把 <code>pro</code> 层级写入浏览器本地存储 → 专业版测评（大五人格、恋爱依恋）立即解锁。</li>
+<li>逻辑在 <code>js/redeem.js</code>：支持层级（free/pro/all）、本地解锁、可恢复锁定。</li>
+</ul>
+<blockquote>
+<p>🔒 <strong>安全说明（重要）</strong>：当前演示版把码表打进前端 <code>codes.js</code>，任何人都能在源码里看到明文码。这<strong>只适合低客单 + 娱乐测试的冷启动</strong>。规模化后必须改为 <strong>服务端校验 + 数据库核销</strong>（见第七节），否则码会被白嫖。</p>
+</blockquote>
+<hr />
+<h2 id="六合规清单必须守住">六、合规清单（必须守住）</h2>
+
+<ol>
+<li><strong>诊断红线</strong>：抑郁、焦虑、双相、人格障碍等属《精神卫生法》范畴，网测<strong>不得直接下「你得了 XX」结论</strong>。本项目所有结果都定位「娱乐/自我探索」，报告固定加「非专业结论，不能替代诊断」。</li>
+<li><strong>数据红线</strong>：心理测评结果属《个人信息保护法》敏感个人信息。本项目作答<strong>仅在浏览器本地计算、不上传、不落库</strong>，从源头规避「敏感信息须加密存储」义务。若日后要存个体结果，需单独同意 + 加密 + 设留存期 + 可删除。</li>
+<li><strong>宣传红线</strong>：禁用「100% 精准」「3 分钟测抑郁」「5 分钟知性格」等绝对化/医疗化表述。</li>
+<li><strong>导流红线</strong>：小红书对站外导流管控严，优先<strong>站内成交 + 自动发货</strong>，不要在笔记正文硬塞微信/外链。</li>
+<li><strong>类目红线</strong>：避开「教育培训」定向邀约类目，走「电子资源 / 趣味测试」。</li>
+<li><strong>员工报备</strong>：腾讯员工先确认利益冲突/经商报备要求。</li>
+</ol>
+<hr />
+<h2 id="七从演示版到生产级进阶">七、从演示版到生产级（进阶）</h2>
+
+<p>当前 <code>redeem.js</code> 是客户端校验，仅适合冷启动。规模上来后建议：</p>
+<ul>
+<li><strong>服务端校验</strong>：后端 <code>/redeem</code> 接口接收码 → 查数据库 → 返回是否有效 + 已核销次数 → 核销后置 <code>used=true</code>。</li>
+<li><strong>码表不出前端</strong>：<code>codes.js</code> 改为只存「已登录态」令牌，真实码库在数据库。</li>
+<li><strong>防刷</strong>：单码单次/有限次使用、绑定设备指纹、限频。</li>
+<li><strong>可观测</strong>：每笔兑换码对应一笔订单，导出对账报表。</li>
+</ul>
+<p>最小可行后端可用任意 BaaS（如平台云函数 + 数据库）实现，前端只改 <code>redeem.js</code> 的校验请求即可。</p>
+<hr />
+<h2 id="八本周可执行行动清单">八、本周可执行行动清单</h2>
+
+<ol>
+<li>确认主体：办理个体户营业执照（或确认个人店能否上电子资源类目）。</li>
+<li>站点外网托管：见配套部署说明，把 <code>psyche-survey/</code> 发布到可访问域名。</li>
+<li>生成首批兑换码：<code>node tools/gen_codes.js --count 100 --tier pro</code>。</li>
+<li>小红书账号搭建：昵称/简介/首图模板，先发 3 篇笔记测流量。</li>
+<li>上架 1 个引流款（1.99 元趣味性格码）+ 1 个专业款（9.9 元大五人格码），接自动发货。</li>
+<li>跑 2 周，看哪类测评自然流量最高，再决定加哪些新测试（本项目加测试只改 <code>js/tests.js</code> 一个文件）。</li>
+</ol>
+<hr />
+<p><em>文档配套：本仓库另含《测评题库与答案解析》，列出 5 套测评的完整题目、计分与结果分析。</em></p>
+<footer class="doc">
+  <span>心测小站 · 小红书起号与「测评兑换码」变现方案</span>
+  <span>由 md2html.py 从 Markdown 自动生成，请勿直接编辑 HTML</span>
+</footer>
+</main>
+</div>
+
+<script>
+(function(){
+  var links=[].slice.call(document.querySelectorAll('aside a[href^="#"]'));
+  if(!links.length) return;
+  var map={};
+  links.forEach(function(a){ map[decodeURIComponent(a.getAttribute('href').slice(1))]=a; });
+  var heads=[].slice.call(document.querySelectorAll('main h2[id],main h3[id]'));
+  function onScroll(){
+    var top=document.documentElement.scrollTop+90, cur=null;
+    heads.forEach(function(h){ if(h.offsetTop<=top) cur=h; });
+    links.forEach(function(a){ a.style.color=''; a.style.borderLeftColor=''; });
+    if(cur && map[cur.id]){
+      map[cur.id].style.color='var(--accent)';
+      map[cur.id].style.borderLeftColor='var(--accent)';
+    }
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+})();
+</script>
+
+</body>
+</html>
