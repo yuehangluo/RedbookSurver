@@ -11,11 +11,12 @@ const get = (name, def) => {
 };
 const count = parseInt(get("count", "50"), 10);
 const tier = get("tier", "pro");
-const prefix = get("prefix", "XHX").toUpperCase();
 const root = path.resolve(__dirname, "..");
 const outJs = path.join(root, "js", "codes.js");
 const outCsv = path.join(root, "codes_export.csv");
+const outImport = path.join(root, "codes_import.csv");
 
+// 12 位纯大写字母+数字（剔除易混淆字符 0/O/1/I/L），不含前缀与横杠
 const ALPHABET = "23456789ABCDEFGHJKMNPQRSTUVWXYZ";
 function randSeg(len) {
   let s = "";
@@ -24,7 +25,7 @@ function randSeg(len) {
   return s;
 }
 function makeCode() {
-  return `${prefix}-${randSeg(4)}-${randSeg(4)}`;
+  return randSeg(12);
 }
 
 const codes = [];
@@ -35,15 +36,20 @@ while (codes.length < count && guard < count * 50) {
   const c = makeCode();
   if (seen.has(c)) continue;
   seen.add(c);
-  codes.push({ code: c, tier, note: "", generatedAt: new Date().toISOString().slice(0, 10) });
+  codes.push({ code: c, tier, generatedAt: new Date().toISOString().slice(0, 10) });
 }
 
 const js = `/* 自动生成：测评兑换码（演示用，生产须走服务端校验） */\nwindow.CODES = ${JSON.stringify(codes, null, 2)};\n`;
 fs.writeFileSync(outJs, js);
 
+// 内部对账清单（含层级与日期）
 const csv =
-  "code,tier,note,generatedAt\n" +
-  codes.map((c) => [c.code, c.tier, c.note, c.generatedAt].join(",")).join("\n");
+  "code,tier,generatedAt\n" +
+  codes.map((c) => [c.code, c.tier, c.generatedAt].join(",")).join("\n");
 fs.writeFileSync(outCsv, csv);
 
-console.log(`OK ${codes.length} codes tier=${tier}`);
+// 卡密平台导入模板：仅一列「兑换码」（12 位），供有赞/微店自动发货直接上传
+const importCsv = "兑换码\n" + codes.map((c) => c.code).join("\n");
+fs.writeFileSync(outImport, importCsv);
+
+console.log(`OK ${codes.length} codes tier=${tier} (12位无前缀)`);

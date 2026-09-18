@@ -1,1203 +1,1003 @@
 /* 自动生成：测评兑换码（演示用，生产须走服务端校验） */
 window.CODES = [
   {
-    "code": "ZWXL-XKVN-VQK4",
+    "code": "PDHJC8V3AZJF",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-M489-W55W",
+    "code": "VBNZKR6R4B2J",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-VZQQ-V2C9",
+    "code": "MATU2Y9N6HMQ",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-JMVD-VUUJ",
+    "code": "3HS878KCSN8R",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-BE4D-P9KU",
+    "code": "WK6CS6SCH57E",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-R8JW-F8XP",
+    "code": "2NB2UYNGUMSC",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-NP46-YN82",
+    "code": "DD5Y4Z6CZBVP",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-8AFR-VEHE",
+    "code": "4ARNT7VHA9MG",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-ZZ43-TZPS",
+    "code": "UUAA2HAX8YC4",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-C9B3-TAKT",
+    "code": "VEFBBWE4H49P",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-YDAT-C788",
+    "code": "ZABHA7FSKP9K",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-T4WK-XFME",
+    "code": "3WTCSX9CZCX6",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-DUSM-Y238",
+    "code": "M344XYWYB586",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-6HDC-65WH",
+    "code": "R3USMDHYYZH5",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-JTK7-PZC8",
+    "code": "5WTAQMY57Q8H",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-WC8M-55FE",
+    "code": "QCKB3YS9C564",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-NVBB-9CGV",
+    "code": "3UD6XU2SGAUY",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-2FHJ-F65B",
+    "code": "7CANT68EQ8J9",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-N2EM-7F6Z",
+    "code": "HQR2TJR58Z89",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-K5VK-DE7A",
+    "code": "CN3AYE4TDQ59",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-56R8-HCKY",
+    "code": "JHXQGFM6DC5A",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-T2HZ-8A3R",
+    "code": "GEC4MGEDDVV6",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-BH6X-U5D5",
+    "code": "8YAJ6XVJ9YUM",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-U7CP-3SP5",
+    "code": "KPSGRT7SXCCS",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-22EQ-4UTM",
+    "code": "ZJ2SKJ5RV3HS",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-M7DG-S43Z",
+    "code": "6S88AGWE478Y",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-BCEQ-35U8",
+    "code": "VEDU886TVM4A",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-B8ZV-VH4G",
+    "code": "AFQFQK4YTXHK",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-JB55-NV37",
+    "code": "Z7VG85BVX5GA",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-AADG-D3FT",
+    "code": "6KE9DXQ7AM96",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-5NDD-V3JB",
+    "code": "JAYXHXC6WD5R",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-Y5WN-JJSG",
+    "code": "3HED3XC5ZKVU",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-FJT4-EYKQ",
+    "code": "67HT4B2ZR8AY",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-SG3J-ZX87",
+    "code": "AMG4QH9F6S9D",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-AFXS-P43V",
+    "code": "MVUMM38VD5QM",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-A4DV-ATXY",
+    "code": "822DDARKBBFR",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-42H9-4T9P",
+    "code": "YRMHN6ZGG9AD",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-XQRJ-DTK5",
+    "code": "2XDS3YMTZQNV",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-V7FK-KNVK",
+    "code": "CAMGM3W47KJN",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-HVTN-NYAU",
+    "code": "2CBPUCVM7PA5",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-FVAJ-C4Q7",
+    "code": "DMVUKZR24AZW",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-NJCJ-X73P",
+    "code": "GYTEVSC7WXCY",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-5Y9Z-8JFA",
+    "code": "N24UU29R2G8C",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-9SZM-R6Y9",
+    "code": "EPVZ3TQUGGPH",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-YDP6-VTJ5",
+    "code": "WKKHPJR384NP",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-BRYR-7GZC",
+    "code": "JXBSSQ8GUJKH",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-WDHM-6AME",
+    "code": "TV36RA4NF88Y",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-RSRQ-F9KY",
+    "code": "Y6V4YSJCYKJY",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-E4FE-MB3G",
+    "code": "C5FWPQXNJUC8",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-CYV6-EAX3",
+    "code": "626XRP5HRG7S",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-4JF3-UYWQ",
+    "code": "4A257ZPGWKD6",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-KBG4-FEU7",
+    "code": "6F26QF7GK2XC",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-FFCJ-PYWR",
+    "code": "6P8R5SYT4S25",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-CK4Q-EP9V",
+    "code": "JKJ6PPEV43JW",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-YGQA-P8Q2",
+    "code": "KXJQFR3SU32G",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-P9GN-EWVB",
+    "code": "UQB3K2PP5CH4",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-WXQ6-DW4D",
+    "code": "B67CUG55ERQF",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-WDJR-W459",
+    "code": "2CCDXM37Z4T7",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-86FK-9D8A",
+    "code": "Z7CB3W9DFDYQ",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-ZCRF-T9B7",
+    "code": "TKEANVTT9ESP",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-9743-AW5J",
+    "code": "NW4H39YNMM5N",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-NY4K-7XXQ",
+    "code": "T52A3PQMB9J3",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-FVCW-H2WX",
+    "code": "X452NXG9XY23",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-CWX9-KTRD",
+    "code": "3RXKKS48472T",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-YFQX-N3DU",
+    "code": "Q2ACV7FJ8R23",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-JDPM-AV4J",
+    "code": "RWPU7EW3YUZT",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-76SM-X46H",
+    "code": "WP22KFN6WRKC",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-526X-5RNT",
+    "code": "4DRMP92YZEY5",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-GS6J-8BHD",
+    "code": "DA9XUVU6T2MZ",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-NEXT-UVY7",
+    "code": "JYGUAPZH5G9U",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-45MH-4E35",
+    "code": "2FTUJ9U9VP44",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-CRZV-3KGE",
+    "code": "J9995KKFKNA2",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-HK6F-5YUX",
+    "code": "WY7MBYVK5MKR",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-T7F9-9895",
+    "code": "SMQ7G2YZ4Q28",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-8NGD-JV5P",
+    "code": "G6EG5MFBFDHY",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-FYEM-D2W5",
+    "code": "UQRW3C4TQJUB",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-NB2D-3AK6",
+    "code": "KQHXTKZS3FWU",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-EGW4-G9D9",
+    "code": "F9C4FPDJRMVA",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-AWSJ-FWTK",
+    "code": "JRW4PBHTQJU6",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-4KGA-Z858",
+    "code": "MEAF9Y77U3BW",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-TYYC-ANUU",
+    "code": "8K75VPY6UVW4",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-VPZX-EXPN",
+    "code": "8GH7KGU5RMM4",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-9JUM-N644",
+    "code": "CRG46GB87N97",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-MSKN-CSKQ",
+    "code": "BEJDYS8WR9Z6",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-T8NA-6933",
+    "code": "N942FP7BZEDG",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-7RTB-UZAW",
+    "code": "5NVD4WCKMN3T",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-62A8-32AC",
+    "code": "H5YU8Z68XSVC",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-828A-26GN",
+    "code": "NNYAC5DJR5VG",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-A9GG-6S3U",
+    "code": "TXU78FP6BNBB",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-J62V-9F8Y",
+    "code": "77N5XXWUM2B9",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-WV2A-DEKS",
+    "code": "7W6CQ4K9DFY2",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-8QC7-H469",
+    "code": "FQKQPEY3V7JU",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-5RJA-UWY7",
+    "code": "YF77Z88G4W53",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-89MW-HKVT",
+    "code": "2MR8AD65ABD9",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-FJH7-64AH",
+    "code": "G492NK5KG2H7",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-W637-QGD9",
+    "code": "W3MK92FH6ZFT",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-PSKR-7EZZ",
+    "code": "ES8TWA4RTC7T",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-92F2-NE3R",
+    "code": "JS45JX5DCDP5",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-2BQH-PP93",
+    "code": "CFWCW5E69D29",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-94WQ-PMXP",
+    "code": "VZ6H8BGJVMN5",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-4VA4-XXHT",
+    "code": "MQR9R2N34GWB",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-FW79-PCH4",
+    "code": "VM6YTSKUE3P5",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-PVQC-8MZW",
+    "code": "XWYUF9SP5ATS",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-Q2B2-S3XP",
+    "code": "AMR35S9KH3SV",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-TF9R-P8QE",
+    "code": "WFKAYYJ2RERW",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-HAXC-XH98",
+    "code": "FWDNUSWZK9K4",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-Q3W7-2RN8",
+    "code": "J2TZRBBJ9B9T",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-XYPS-7388",
+    "code": "AHN3K5CJFACB",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-7KN3-9CKD",
+    "code": "2XXDWJHDGG53",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-NJS2-DQBG",
+    "code": "G5MPDVSDUQP6",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-WEXB-BQU7",
+    "code": "SQ47DGSP78H3",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-UJRB-KN4Z",
+    "code": "NGFXAAKV293Z",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-T59V-Z4RC",
+    "code": "N9QFAVMEWU3S",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-BM7W-JTQP",
+    "code": "CS5JHPZ5G578",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-X2KW-AA6W",
+    "code": "AETGVPUF4TNC",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-SQ9F-HCYD",
+    "code": "5JKA3S3KJ9PG",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-MXYW-3TBZ",
+    "code": "783SVHSDERRA",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-BBNN-RV8C",
+    "code": "E2PZ9V8G2A9X",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-VA9V-FZJJ",
+    "code": "5CNEUR2EPXP5",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-ENDN-46VM",
+    "code": "P5C4KW4BXWRU",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-FEDV-NUJX",
+    "code": "H9DP47842AJ6",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-X2ZN-K59W",
+    "code": "4ZEGEJ9F746J",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-TRBT-B27R",
+    "code": "C96QNH97XBQD",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-J28A-TB3F",
+    "code": "RYTYM72TNDVS",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-2F5K-GMV2",
+    "code": "TBWQK8PHVZTM",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-4W33-3CFP",
+    "code": "6KAPG99NUMRV",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-65G6-T5UQ",
+    "code": "KKVVZMMQNNDQ",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-YEK2-HQ5M",
+    "code": "YG3UVUY2J2R8",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-FDBA-QDHW",
+    "code": "B747E5KSQJCU",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-9Y3J-QM67",
+    "code": "H399DC2RCUCP",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-YMGG-U72H",
+    "code": "TVTCHNHWNH8H",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-J85E-34MS",
+    "code": "6EBW72RXHCJ4",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-VFH3-J9ZU",
+    "code": "XMCRJHGEM5V3",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-M6ST-BZEG",
+    "code": "WNVK2VFU5J8P",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-TEGK-4EYN",
+    "code": "XZSNCPH5MMRK",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-KH69-BEZ6",
+    "code": "AUU5VNN3PUU5",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-52BE-X6QG",
+    "code": "X4VVSEGQHKGE",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-REQP-AUDH",
+    "code": "957AX3FZNZD6",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-9FZ2-TYRJ",
+    "code": "SJA2TQ5RE4ZV",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-FXAT-T3V7",
+    "code": "4AE5HZA2E2TV",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-4SZ8-ZE3M",
+    "code": "2K4XQWAU8BD3",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-QJK5-FWT8",
+    "code": "3STFFRKFHUPE",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-YMY7-3QGY",
+    "code": "3WWPYKUSJ4M3",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-EQFR-68CX",
+    "code": "FJ2E5JQPANKT",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-K7CK-KDSZ",
+    "code": "59FG33SKSXKD",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-5T6P-K9AQ",
+    "code": "D2K7MD4FHSNN",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-EWSU-76V6",
+    "code": "3DE39XAY3D87",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-JC27-4D86",
+    "code": "FUXYW5PT53Q2",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-6UU7-VQGP",
+    "code": "5BFY6SH858EZ",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-UPG6-7QP3",
+    "code": "UMEPYBTFV9RC",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-T5H7-7BHR",
+    "code": "QYDM6AKQP56J",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-5TZH-E7KP",
+    "code": "9HGF36VRF8TW",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-W2FM-5JPR",
+    "code": "FCEGRQ7KW43Z",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-V8EP-TZ5Y",
+    "code": "VWZSM6AFEXWM",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-JUTA-V2NA",
+    "code": "RTKUSFA3MTHU",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-U2UC-MRD6",
+    "code": "4S9G55P46MPC",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-6ZFY-TU6A",
+    "code": "3US6YANV94EJ",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-NQTS-VZBX",
+    "code": "T3UMHQXW45M5",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-MANT-8CBX",
+    "code": "5Y3JJ4C678ES",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-ME3T-UDCH",
+    "code": "ZA5MQ5U3ANAS",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-GU2Y-74CN",
+    "code": "D3SEXBSDBRZX",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-U8VA-7GVH",
+    "code": "UUNXVYYEC8SX",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-X6QW-W29C",
+    "code": "Z72D2YTHT32Q",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-TRT3-GC4G",
+    "code": "QW98CSZVGTUB",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-CVHN-XDQS",
+    "code": "FMHD487SCE3X",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-VAVE-5CE4",
+    "code": "EZQ63ZN25ZVH",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-RJ3A-PY2R",
+    "code": "CHM4TT4AG2N2",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-FN4M-2DN2",
+    "code": "KPZ85Y9R9C5F",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-VEX5-5YXQ",
+    "code": "DENMTC2U9AM2",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-32M4-RZSC",
+    "code": "9QDQG5ET6MKN",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-VT23-BRGV",
+    "code": "WHPUR75X2ASW",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-F7EC-B8Q4",
+    "code": "CVGATSHJY2TE",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-PWVZ-EXK4",
+    "code": "SWSHEC4EDUPR",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-HBJ9-QMH8",
+    "code": "BRTB567PFT74",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-P67M-ZM8W",
+    "code": "4XETZPMY6BPU",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-7XF3-QJ9M",
+    "code": "R6DFH3PUW68U",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-4NRD-WSQW",
+    "code": "QHMX93RXGD44",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-2PRY-TMQT",
+    "code": "YHM6X3PNKFZ7",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-WG8W-V3FC",
+    "code": "VZAS4996KRCM",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-5QJU-WAR3",
+    "code": "X5MGEFF594J2",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-SCBU-B23M",
+    "code": "DPU99JB2WBVN",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-U55P-2KF5",
+    "code": "4JWER7F4XZ5T",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-Q9JF-S3G7",
+    "code": "CJ37FEGFFCUQ",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-XPWY-GSW5",
+    "code": "D6HR3QTMWC95",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-DD4E-GP39",
+    "code": "DDF2W5R2EU3D",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-NWFF-24AQ",
+    "code": "ZJMGNCZPJDXX",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-5UCZ-76DU",
+    "code": "EWGG6C92RMK6",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-STAF-V4QS",
+    "code": "8CGEKNWTRSXD",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-NBZT-HR7Y",
+    "code": "8BPWU3ZKZ8HK",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-8VD8-H34N",
+    "code": "DPTCX4YHXW4S",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-B5GF-8768",
+    "code": "A29887Z34RTA",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-G8FE-SJMH",
+    "code": "M5E829FVQPYJ",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-CJ8U-WJMC",
+    "code": "G264S883P9T8",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-W43P-TSKS",
+    "code": "TPF89D5FA5BW",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-MHAG-H2S7",
+    "code": "HHMMJ3URPA7J",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-S6Z8-VTB9",
+    "code": "V5Y59FWNMCEU",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-SGSF-SEJ4",
+    "code": "SZXMP65MS2BF",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-R6TS-QD4P",
+    "code": "67N3QE7MXB4D",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-UVEA-N2KW",
+    "code": "UQVGM88YTDBA",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   },
   {
-    "code": "ZWXL-UMEF-ETNV",
+    "code": "EPTACFUFE9VX",
     "tier": "pro",
-    "note": "",
     "generatedAt": "2026-09-18"
   }
 ];

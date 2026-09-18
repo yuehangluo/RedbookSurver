@@ -62,8 +62,8 @@
     overlay.innerHTML = `
       <div class="modal">
         <div class="modal-title">输入测评兑换码</div>
-        <div class="modal-sub">在小红书店铺下单后，凭发货的兑换码解锁专业版测评</div>
-        <input class="code-input" placeholder="例如 ZW-XXXX-XXXX" maxlength="20" />
+        <div class="modal-sub">在小红书店铺下单后，凭发货的 12 位兑换码解锁全部专业版测评</div>
+        <input class="code-input" placeholder="请输入12位兑换码，例如 PDHJC8V3AZJF" maxlength="14" />
         <div class="modal-msg"></div>
         <button class="btn modal-ok">解锁</button>
         <div class="modal-cancel">稍后再说</div>
@@ -101,11 +101,13 @@
     const answers = {};
     app.innerHTML = "";
 
+    // 标题 + 进度条包进同一 sticky 容器，滚动时一起冻结在顶部
+    const sticky = el(`<div class="quiz-header"></div>`);
     const head = el(`<div class="brand"><h1 style="font-size:19px">${test.emoji} ${test.title}</h1><p>${test.subtitle}</p></div>`);
-    app.appendChild(head);
-
-    const prog = el(`<div class="progress"><i></i></div><div class="progress-label">0 / ${test.questions.length}</div>`);
-    app.appendChild(prog);
+    const prog = el(`<div class="progress-wrap"><div class="progress"><i></i></div><div class="progress-label">0 / ${test.questions.length}</div></div>`);
+    sticky.appendChild(head);
+    sticky.appendChild(prog);
+    app.appendChild(sticky);
     const bar = prog.querySelector("i");
     const label = prog.querySelector(".progress-label");
 
@@ -158,8 +160,8 @@
 
     function updateProgress() {
       const n = Object.keys(answers).length;
-      bar.style.width = (n / test.questions.length * 100) + "%";
-      label.textContent = n + " / " + test.questions.length;
+      if (bar) bar.style.width = (n / test.questions.length * 100) + "%";
+      if (label) label.textContent = n + " / " + test.questions.length;
       btn.disabled = n < test.questions.length;
     }
   }
